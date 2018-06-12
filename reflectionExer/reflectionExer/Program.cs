@@ -132,7 +132,7 @@ namespace reflectionExer
                         }
                         else if (prop.Name.Equals("Name"))
                         {
-                            prop.SetValue(oPeople, "风潇潇");
+                            prop.SetValue(oPeople, "Jorge");
                         }
                         Console.WriteLine($"{type.Name}.{prop.Name}={prop.GetValue(oPeople)}");
                     }
@@ -143,13 +143,44 @@ namespace reflectionExer
                         Console.WriteLine(field.GetValue(oPeople));
                         if (field.Name.Equals("Description"))
                         {
-                            field.SetValue(oPeople, "高级班的新学员");
+                            field.SetValue(oPeople, "New student");
                         }
                         Console.WriteLine($"{type.Name}.{field.Name}={field.GetValue(oPeople)}");
                     }
+
+
+                    {
+                        Type typePeople = typeof(People);
+
+                        Type typePeopleDTO = typeof(PeopleDTO); //Data Transfer Object
+                        object peopleDTO = Activator.CreateInstance(typePeopleDTO); //Create peopleDTO instance
+                        foreach (var prop in typePeopleDTO.GetProperties())
+                        {
+
+                            //if (prop.Name.Equals("Id"))
+                            //{
+                            //    //object value = typePeople.GetProperty("Id").GetValue(people);
+                            //    object value = typePeople.GetProperty(prop.Name).GetValue(people);
+                            //    prop.SetValue(peopleDTO, value);
+                            //}
+                            //else if (prop.Name.Equals("Name"))
+                            //{
+                            //    //object value = typePeople.GetProperty("Name").GetValue(people);
+                            //    object value = typePeople.GetProperty(prop.Name).GetValue(people);
+                            //    prop.SetValue(peopleDTO, value);
+                            //}
+                            object value = typePeople.GetProperty(prop.Name).GetValue(people);
+                            prop.SetValue(peopleDTO, value);
+                        }
+                        foreach (var filed in typePeopleDTO.GetFields())
+                        {
+                            object value = typePeople.GetField(filed.Name).GetValue(people);
+                            filed.SetValue(peopleDTO, value);
+                        }
+                    }
                 }
 
-                Console.ReadLine();
+                    Console.ReadLine();
 
 
 
