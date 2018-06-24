@@ -13,6 +13,14 @@ using Ruanmou.Model;
 
 namespace reflectionExer
 {
+    /// <summary>
+    /// Refelction:
+    /// --Advantage: Dymanmic
+    /// --Disadvantage: 
+    /// ----Complex
+    /// ----Avoid the check of compailer
+    /// ----Time consumming
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -149,6 +157,7 @@ namespace reflectionExer
                     }
 
 
+                    //Create a copy of an object by reflection
                     {
                         Type typePeople = typeof(People);
 
