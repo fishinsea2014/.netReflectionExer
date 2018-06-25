@@ -9,7 +9,7 @@ namespace Ruanmou.Model
     {
         public People()
         {
-            Console.WriteLine("{0}被创建", this.GetType().FullName);
+            Console.WriteLine("{0} is created", this.GetType().FullName);
         }
 
         public int Id { get; set; }
@@ -21,10 +21,10 @@ namespace Ruanmou.Model
     {
         public PeopleDTO()
         {
-            Console.WriteLine("{0}被创建", this.GetType().FullName);
+            Console.WriteLine("{0} is created", this.GetType().FullName);
         }
         public int Id { get; set; }
-        public string Name { get; set; }//ShortName  特性
+        public string Name { get; set; }//ShortName  attribute
 
         public string Description;
     }

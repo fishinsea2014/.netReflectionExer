@@ -46,7 +46,6 @@
     <Compile Include="Factory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -59,10 +58,6 @@
     <ProjectReference Include="..\Ruanmou.DB.MySql\Ruanmou.DB.MySql.csproj">
       <Project>{d18899e6-cda4-4118-b488-7760a1c4ed59}</Project>
       <Name>Ruanmou.DB.MySql</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ruanmou.DB.Oracle\Ruanmou.DB.Oracle.csproj">
-      <Project>{64f08dbd-c362-42cf-a727-6575fb1923b0}</Project>
-      <Name>Ruanmou.DB.Oracle</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ruanmou.DB.SqlServer\Ruanmou.DB.SqlServer.csproj">
       <Project>{fd6e412c-7840-44b4-9794-e314ea7a3659}</Project>

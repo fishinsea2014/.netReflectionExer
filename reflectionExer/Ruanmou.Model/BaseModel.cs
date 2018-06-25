@@ -2,7 +2,7 @@
 namespace Ruanmou.Model
 {
     /// <summary>
-    /// 数据库basemodel
+    /// Database basemodel
     /// </summary>
     public class BaseModel
     {

@@ -20,7 +20,7 @@ namespace Ruanmou.DB.SqlServer
 
         public SqlServerHelper()
         {
-            //Console.WriteLine("{0}被构造", this.GetType().Name);
+            //Console.WriteLine("{0} is created", this.GetType().Name);
         }
 
         public void Query()

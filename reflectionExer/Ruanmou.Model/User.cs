@@ -24,12 +24,12 @@ namespace Ruanmou.Model
         public string CompanyName { set; get; }
 
         /// <summary>
-        /// 用户状态  0正常 1冻结 2删除
+        /// User status: 0- Normal 1-Freeze 2-Deleted
         /// </summary>
         public int State { set; get; }
 
         /// <summary>
-        /// 用户类型  1 普通用户 2管理员 4超级管理员
+        /// Type of users:  1- normal 2- Admin 4- Super Admin
         /// </summary>
         public int UserType { set; get; }
 

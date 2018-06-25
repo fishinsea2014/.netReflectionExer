@@ -7,110 +7,110 @@ using System.Threading.Tasks;
 namespace Ruanmou.DB.SqlServer
 {
     /// <summary>
-    /// 反射测试类
+    /// Test reflection
     /// </summary>
     public class ReflectionTest
     {
         #region Identity
         /// <summary>
-        /// 无参构造函数
+        /// Construction without arguments
         /// </summary>
         public ReflectionTest()
         {
-            Console.WriteLine("这里是{0}无参数构造函数", this.GetType());
+            Console.WriteLine("This is construction of {0} without arguments", this.GetType());
         }
 
         /// <summary>
-        /// 带参数构造函数
+        /// Construction with arguments
         /// </summary>
         /// <param name="name"></param>
         public ReflectionTest(string name)
         {
-            Console.WriteLine("这里是{0} 有参数构造函数", this.GetType());
+            Console.WriteLine("This is construction of {0} with arguments", this.GetType());
         }
 
         public ReflectionTest(int id)
         {
-            Console.WriteLine("这里是{0} 有参数构造函数", this.GetType());
+            Console.WriteLine("This is construction of {0} with arguments", this.GetType());
         }
         #endregion
 
         #region Method
         /// <summary>
-        /// 无参方法
+        /// Method without arguments
         /// </summary>
         public void Show1()
         {
-            Console.WriteLine("这里是{0}的Show1", this.GetType());
+            Console.WriteLine("This is the show1 method of {0}", this.GetType());
         }
         /// <summary>
-        /// 有参数方法
+        /// Method with arguments
         /// </summary>
         /// <param name="id"></param>
         public void Show2(int id)
         {
 
-            Console.WriteLine("这里是{0}的Show2", this.GetType());
+            Console.WriteLine("This is the show2 method of {0}", this.GetType());
         }
         /// <summary>
-        /// 重载方法之一
+        /// First method of reloading 
         /// </summary>
         /// <param name="id"></param>
         /// <param name="name"></param>
         public void Show3(int id, string name)
         {
-            Console.WriteLine("这里是{0}的Show3", this.GetType());
+            Console.WriteLine("This is the show3 method of {0}", this.GetType());
         }
         /// <summary>
-        /// 重载方法之二
+        /// Second method of reloading 
         /// </summary>
         /// <param name="name"></param>
         /// <param name="id"></param>
         public void Show3(string name, int id)
         {
-            Console.WriteLine("这里是{0}的Show3_2", this.GetType());
+            Console.WriteLine("This is the show3_2 method of {0}", this.GetType());
         }
         /// <summary>
-        /// 重载方法之三
+        /// Third method of reloading 
         /// </summary>
         /// <param name="id"></param>
         public void Show3(int id)
         {
 
-            Console.WriteLine("这里是{0}的Show3_3", this.GetType());
+            Console.WriteLine("This is the show3_3 method of {0}", this.GetType());
         }
         /// <summary>
-        /// 重载方法之四
+        /// Fourth method of reloading 
         /// </summary>
         /// <param name="name"></param>
         public void Show3(string name)
         {
 
-            Console.WriteLine("这里是{0}的Show3_4", this.GetType());
+            Console.WriteLine("This is the show3_4 method of {0}", this.GetType());
         }
         /// <summary>
-        /// 重载方法之五
+        /// Fifth method of reloading 
         /// </summary>
         public void Show3()
         {
 
-            Console.WriteLine("这里是{0}的Show3_1", this.GetType());
+            Console.WriteLine("This is the show3_1 method of {0}", this.GetType());
         }
         /// <summary>
-        /// 私有方法
+        /// Private method
         /// </summary>
         /// <param name="name"></param>
         private void Show4(string name)
         {
-            Console.WriteLine("这里是{0}的Show4", this.GetType());
+            Console.WriteLine("This is the show4 method of {0}", this.GetType());
         }
         /// <summary>
-        /// 静态方法
+        /// Static method
         /// </summary>
         /// <param name="name"></param>
         public static void Show5(string name)
         {
-            Console.WriteLine("这里是{0}的Show5", typeof(ReflectionTest));
+            Console.WriteLine("This is the show5 method of {0}", typeof(ReflectionTest));
         }
         #endregion
     }

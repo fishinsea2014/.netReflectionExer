@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Ruanmou.DB.SqlServer
 {
     /// <summary>
-    /// 单例模式
+    /// Singleton pattern
     /// </summary>
     public sealed class Singleton
     {

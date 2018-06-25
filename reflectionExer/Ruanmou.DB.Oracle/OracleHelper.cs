@@ -11,7 +11,7 @@ namespace Ruanmou.DB.Oracle
     {
         public OracleHelper()
         {
-            Console.WriteLine("{0}被构造", this.GetType().Name);
+            Console.WriteLine("{0} is created", this.GetType().Name);
         }
 
 
